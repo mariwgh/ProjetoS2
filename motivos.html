@@ -24,15 +24,15 @@
             const ids = ['div1', 'div2', 'div3', 'div4'];
 
             ids.forEach(id => {
+                //pega a div mesmo
                 const div = document.getElementById(id);
 
                 // Pega as coordenadas da div
                 const rect = div.getBoundingClientRect();
 
                 // Verifica se o toque foi dentro dos limites da div
-                if (touchX >= rect.left && touchX <= rect.right &&
-                    touchY >= rect.top && touchY <= rect.bottom) {
-                    div.style.display = 'block'; // Torna visível
+                if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
+                    div.style.display = 'none'; // Torna visível
                 }
             });
         });
