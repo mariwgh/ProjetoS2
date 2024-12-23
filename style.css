@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(128, 30, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#inicial{
+    text-align: center;
+    background-color: rgb(70, 173, 87);
+    border-radius: 100%;
+    padding: 80px;
+}
