@@ -45,6 +45,16 @@
         const flap = document.getElementById('top-flap');
         const heartContainer = document.getElementById('heart-container');
         const papel = document.getElementById('papel');
+        const hearts = document.querySelectorAll(".coracao");
+
+        // Função para ativar o voo dos corações
+        function makeHeartsFly() {
+            hearts.forEach((heart, index) => {
+                setTimeout(() => {
+                    heart.classList.add("fly");
+                }, index * 500); // Adiciona delay entre cada coração
+            });
+        }
 
         const openButton = document.getElementById('abrir');
         const resetButton = document.getElementById('fechar');
@@ -55,6 +65,7 @@
         openButton.addEventListener('touchstart', () => {
             flap.style.transform = 'rotateX(-180deg)';
             heartContainer.style.opacity = '1';
+            makeHeartsFly();
         });
 
         resetButton.addEventListener('touchstart', () => {
