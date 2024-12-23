@@ -23,5 +23,5 @@ div.addEventListener('touchend', (e) => {
     currentIndex = (currentIndex + 1) % texts.length; // Vai para o próximo texto
   }
 
-  div.textContent = texts[currentIndex]; // Atualiza o texto da div
+  div.innerHTML = texts[currentIndex]; // Atualiza o texto da div
 });
