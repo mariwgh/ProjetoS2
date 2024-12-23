@@ -18,14 +18,17 @@
         <div id="top-flap"></div>
         <div id="divisoria-sombra"></div>
         
-        <div id="papel"></div>
+        <div id="papel">
+            <span id="escrita"></span>
+        </div>
     </div>
-    
+
     
     <div id="button-container">
         <button id="abrir">Abrir</button>
         <button id="fechar">Fechar</button>
         <button id="puxar">Puxar</button>
+        <button id="guardar">Guardar</button>
     </div>    
 
 
@@ -38,6 +41,7 @@
         const openButton = document.getElementById('abrir');
         const resetButton = document.getElementById('fechar');
         const pullButton = document.getElementById('puxar');
+        const saveButton = document.getElementById('guardar');
 
         openButton.addEventListener('touchstart', () => {
             flap.style.transform = 'rotateX(-180deg)';
@@ -51,6 +55,23 @@
 
         pullButton.addEventListener('touchstart', () => {
             papel.style.opacity = 1;
+
+            const texto = "Deslize para o sentido esquero para avançar e para o sentido direito para retroceder! ❤";
+            const elemento = document.getElementById("escrita");
+            let indice = 0;
+
+            function escreverTexto() {
+                if (indice < texto.length) {
+                    elemento.textContent += texto[indice];
+                    indice++;
+                    setTimeout(escreverTexto, 50); // Adiciona a próxima letra após 50ms
+                }
+            }
+            escreverTexto();
+        })
+
+        saveButton.addEventListener('touchstart', () => {
+            papel.style.opacity = 0;
         })
 
     </script>
