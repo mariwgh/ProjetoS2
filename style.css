@@ -17,7 +17,7 @@ body{
 
 .hidden {
     position: absolute;
-    display: none;
+    opacity: 0;
     background-color: rgb(70, 173, 87);
     border: 1px solid rgb(196, 186, 186);
     text-align: center;
