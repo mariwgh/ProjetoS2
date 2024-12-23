@@ -15,11 +15,12 @@
     <div id="div4" class="hidden" style="bottom: 100px;">Ily</div>
 
     <script>
-        document.body.addEventListener('click', (event) => {
-            // Coordenadas do clique
-            const clickX = event.clientX;
-            const clickY = event.clientY;
+        document.body.addEventListener('touchstart', (event) => {
+            // Coordenadas do toque (primeiro dedo que tocou)
+            const touchX = event.touches[0].clientX;
+            const touchY = event.touches[0].clientY;
 
+            // Lista de IDs das divs
             const ids = ['div1', 'div2', 'div3', 'div4'];
 
             ids.forEach(id => {
@@ -28,9 +29,9 @@
                 // Pega as coordenadas da div
                 const rect = div.getBoundingClientRect();
 
-                // Verifica se o clique foi dentro dos limites da div
-                if (clickX >= rect.left && clickX <= rect.right &&
-                    clickY >= rect.top && clickY <= rect.bottom) {
+                // Verifica se o toque foi dentro dos limites da div
+                if (touchX >= rect.left && touchX <= rect.right &&
+                    touchY >= rect.top && touchY <= rect.bottom) {
                     div.style.display = 'block'; // Torna visível
                 }
             });
