@@ -8,6 +8,11 @@
 </head>
 
 <body>
+    <div id="instrução">
+        Clique e descubra!
+        <br>
+        <span id="pontuacao">0</span>/4
+    </div>
     <!-- Divs escondidas com IDs -->
     <div id="div1" class="hidden" style="left: 100px;">Oi</div>
     <div id="div2" class="hidden" style="right: 100px;">Tudo bem?</div>
@@ -15,6 +20,8 @@
     <div id="div4" class="hidden" style="bottom: 100px;">Ily</div>
 
     <script>
+        let pontuacao = 0; // Variável para armazenar a pontuação
+
         document.body.addEventListener('touchstart', (event) => {
             // Coordenadas do toque (primeiro dedo que tocou)
             const touchX = event.touches[0].clientX;
@@ -27,12 +34,17 @@
                 //pega a div mesmo
                 const div = document.getElementById(id);
 
+                const pontuacao = document.getElementById(pontuacao);
+
                 // Pega as coordenadas da div
                 const rect = div.getBoundingClientRect();
 
                 // Verifica se o toque foi dentro dos limites da div
                 if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
                     div.style.opacity = 1; // Torna visível
+
+                    pontuacao++; // Incrementa a pontuação
+                    document.getElementById('pontuacao').textContent = pontuacao;
                 }
             });
         });

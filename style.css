@@ -15,7 +15,7 @@ body{
     padding: 100px;
 }
 
-.hidden {
+.hidden{
     position: absolute;
     opacity: 0;
     background-color: rgb(70, 173, 87);
@@ -23,4 +23,12 @@ body{
     text-align: center;
     border-radius: 100%;
     padding: 50px;
+}
+
+#instrução{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 550px;
+    text-align: center;
 }
