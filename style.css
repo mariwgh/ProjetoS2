@@ -32,3 +32,13 @@ body{
     margin-bottom: 550px;
     text-align: center;
 }
+
+#hiddenMaior{
+    position: absolute;
+    opacity: 0;
+    background-color: rgb(95, 182, 109);
+    border: 2px solid rgb(196, 186, 186);
+    text-align: center;
+    border-radius: 100%;
+    padding: 50px;
+}

@@ -8,17 +8,22 @@
 </head>
 
 <body>
+    <!-- Divs escondidas com IDs -->
+    <div id="div1" class="hidden" style="left: 100px;">Oi</div>
+    <div id="div2" class="hidden" style="right: 100px;">Tudo bem?</div>
+    <div id="div3" class="hidden" style="top: 100px;">Como vai?</div>
+    <div id="div4" class="hidden" style="bottom: 100px;">Ily</div>
+    
     <div id="instrução">
         Clique e descubra!
         <br>
         <span id="pontuacao">0</span>/4
     </div>
 
-    <!-- Divs escondidas com IDs -->
-    <div id="div1" class="hidden" style="left: 100px;">Oi</div>
-    <div id="div2" class="hidden" style="right: 100px;">Tudo bem?</div>
-    <div id="div3" class="hidden" style="top: 100px;">Como vai?</div>
-    <div id="div4" class="hidden" style="bottom: 100px;">Ily</div>
+    <div id="hiddenMaior">
+        <h4>Você achou todos! Clique no texto para mudar de página.</h4>
+    </div>
+
 
     <script>
         let pontuacao = 0; // Variável para armazenar a pontuação
@@ -44,8 +49,19 @@
 
                     pontuacao++; // Incrementa a pontuação
                     document.getElementById('pontuacao').textContent = pontuacao;
-                }
+                }                
             });
+            
+            //se ja achou todos
+            if (pontuacao == ids.length + 1) {
+                const divFinal = document.getElementById(hiddenMaior)
+                const rect = divFinal.getBoundingClientRect();
+                divFinal.style.opacity = 1;
+
+                if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
+                    window.location.href = 'index.html'; 
+                }
+            }
         });
     </script>
 </body>
