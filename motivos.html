@@ -39,7 +39,7 @@
                 const rect = div.getBoundingClientRect();
 
                 // Verifica se o toque foi dentro dos limites da div
-                if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
+                if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom && div.style.opacity != 1) {
                     div.style.opacity = 1; // Torna visível
 
                     pontuacao++; // Incrementa a pontuação
