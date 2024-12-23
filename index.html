@@ -12,7 +12,43 @@
         <h4>Deslize para o sentido esquero para avançar e para o sentido direito para retroceder!</h4>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const div = document.getElementById('inicial');
+
+        let startX = 0; // Ponto inicial do toque
+
+        let textos = ['Eu', 'te', 'amo.', 'Avance mais um.']; 
+
+        let indiceAtual = 0;
+
+        div.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX; // Registra o ponto inicial do toque
+        });
+
+        div.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX; // Registra o ponto final do toque
+        const deltaX = endX - startX; // Calcula a diferença do movimento
+
+        // Deslizou para a direita
+        if (deltaX > 50) {
+            indiceAtual = (indiceAtual - 1 + textos.length) % textos.length; // Vai para o texto anterior
+        } 
+        // Deslizou para a esquerda
+        else if (deltaX < -50) {
+            // Verifica se estamos no último texto
+            if (indiceAtual === textos.length - 1) {
+                // Redireciona para outra página
+                window.location.href = 'motivos.html'; // Substitua pelo caminho da sua página
+                return; // Para evitar continuar atualizando o texto
+            }
+
+            indiceAtual = (indiceAtual + 1) % textos.length; // Vai para o próximo texto
+        }
+
+        div.innerHTML = textos[indiceAtual]; // Atualiza o texto da div
+        });
+
+    </script>
 </body>
 
 </html>
