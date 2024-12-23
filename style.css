@@ -126,8 +126,6 @@ body{
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    display: flex; /* Alinha os botões horizontalmente */
-    gap: 10px; /* Espaço entre os botões */
 }
 
 button {
@@ -135,6 +133,7 @@ button {
     border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     padding: 10px 20px;
+    width: 80px;
 }
 
 #papel{
@@ -146,7 +145,7 @@ button {
     left: 50%;  
     transform: translate(-50%, -50%);  
     opacity: 0;
-    
+
     transform-origin: top;
     transition: transform 0.5s ease;
 }
