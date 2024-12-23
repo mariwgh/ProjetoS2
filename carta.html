@@ -62,6 +62,11 @@
 
             const texto = "Deslize para o sentido esquero para avançar e para o sentido direito para retroceder! ❤";
             const elemento = document.getElementById("escrita");
+
+            if (elemento.textContent === texto) {
+                return; // Sai da função, pois o texto já está completo
+            }
+
             let indice = 0;
 
             function escreverTexto() {
