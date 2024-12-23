@@ -13,7 +13,7 @@
         <br>
         <span id="pontuacao">0</span>/4
     </div>
-    
+
     <!-- Divs escondidas com IDs -->
     <div id="div1" class="hidden" style="left: 100px;">Oi</div>
     <div id="div2" class="hidden" style="right: 100px;">Tudo bem?</div>
@@ -34,8 +34,6 @@
             ids.forEach(id => {
                 //pega a div mesmo
                 const div = document.getElementById(id);
-
-                const pontuacao = document.getElementById(pontuacao);
 
                 // Pega as coordenadas da div
                 const rect = div.getBoundingClientRect();
