@@ -9,10 +9,25 @@
 
 <body>
     <div id="inicial">
-        <h4>Deslize para o sentido esquero para avançar e para o sentido direito para retroceder!</h4>
+        <h4 id="mensagem"></h4>
     </div>
 
     <script>
+        const texto = "Deslize para o sentido esquero para avançar e para o sentido direito para retroceder! ❤";
+        const elemento = document.getElementById("mensagem");
+        let indice = 0;
+
+        function escreverTexto() {
+            if (indice < texto.length) {
+                elemento.textContent += texto[indice];
+                indice++;
+                setTimeout(escreverTexto, 50); // Adiciona a próxima letra após 50ms
+            }
+        }
+        escreverTexto();
+
+
+        //outros textos
         const div = document.getElementById('inicial');
 
         let startX = 0; // Ponto inicial do toque
@@ -38,7 +53,7 @@
             // Verifica se estamos no último texto
             if (indiceAtual === textos.length - 1) {
                 // Redireciona para outra página
-                window.location.href = 'motivos.html'; // Substitua pelo caminho da sua página
+                window.location.href = 'motivos.html'; 
                 return; // Para evitar continuar atualizando o texto
             }
 
