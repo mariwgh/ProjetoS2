@@ -15,8 +15,9 @@
 
     <div id="envelope">
         <div id="bottom-flap"></div>
-        <div id="top-flap"></div>
+        <div id="top-flap"><div id="adesivo"></div></div>
         <div id="divisoria-sombra"></div>
+        
         
         <div id="papel">
             <span id="escrita"></span>
@@ -33,6 +34,9 @@
             <td><button id="fechar">Fechar</button></td>
             <td><button id="guardar">Guardar</button></td>
         </tr>
+        <tr>
+            <td><button id="proximo">Próximo</button></td>
+        </tr>
     </table>    
 
 
@@ -46,6 +50,7 @@
         const resetButton = document.getElementById('fechar');
         const pullButton = document.getElementById('puxar');
         const saveButton = document.getElementById('guardar');
+        const nextButton = document.getElementById('proximo');
 
         openButton.addEventListener('touchstart', () => {
             flap.style.transform = 'rotateX(-180deg)';
@@ -81,6 +86,10 @@
 
         saveButton.addEventListener('touchstart', () => {
             papel.style.opacity = 0;
+        })
+
+        nextButton.addEventListener('touchstart', () => {
+            window.location.href = 'fim.html';
         })
 
     </script>

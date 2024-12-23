@@ -72,6 +72,16 @@ body{
     background-color: rgb(216, 216, 123);
 }
 
+#adesivo{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: -15px;
+    left: -10px;
+    background-color: rgb(170, 127, 35);
+    clip-path: circle(50%);
+}
+
 #divisoria-sombra{
     margin-top: 20px;
     width: 280px;
@@ -123,7 +133,7 @@ body{
 /* Contêiner dos botões */
 #button-container {
     position: absolute;
-    top: 20%;
+    top: 13%;
     left: 50%;
     transform: translate(-50%, -50%); 
 }
