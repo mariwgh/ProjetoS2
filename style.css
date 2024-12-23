@@ -42,3 +42,110 @@ body{
     border-radius: 100%;
     padding: 50px;
 }
+
+#envelope{
+    position: relative;
+    width: 280px;
+    height: 180px;
+    background-color: #f9c5c8;
+    margin-bottom: 20px;
+}
+
+#top-flap{
+    position: absolute;
+
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #e57373;
+
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+#bottom-flap{
+    position: absolute;
+    left: 15px;
+    width: 250px;
+    height: 20px;
+    background-color: rgb(216, 216, 123);
+}
+
+#divisoria-sombra{
+    margin-top: 20px;
+    width: 280px;
+    background-color: rgb(143, 99, 132);
+    height: 1px;
+}
+
+
+.coracao {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background-color: red;
+    transform: rotate(225deg);
+    margin: 10px;
+}
+.coracao::before, .coracao::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: red;
+}
+.coracao::before {
+    left: 18px;
+    top: 0;
+}
+.coracao::after {
+    left: 0;
+    top: 18px;
+}
+
+
+#heart-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding-bottom: 400px;
+}
+
+/* Contêiner dos botões */
+#button-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex; /* Alinha os botões horizontalmente */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+button {
+    background: none;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+#papel{
+    position: absolute;
+    background-color: rgb(216, 216, 123);
+    width:260px;
+    height: 350px;
+    top: 50%; 
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    opacity: 0;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="heart-container">
+        <div class="coracao" style="left: 35px;"></div>
+        <div class="coracao"></div>
+    </div>
+
+    <div id="envelope">
+        <div id="bottom-flap"></div>
+        <div id="top-flap"></div>
+        <div id="divisoria-sombra"></div>
+        
+        <div id="papel"></div>
+    </div>
+    
+    
+    <div id="button-container">
+        <button id="abrir">Abrir</button>
+        <button id="fechar">Fechar</button>
+        <button id="puxar">Puxar</button>
+    </div>    
+
+
+    <script>
+        const envelope = document.getElementById('envelope');
+        const flap = document.getElementById('top-flap');
+        const heartContainer = document.getElementById('heart-container');
+        const papel = document.getElementById('papel');
+
+        const openButton = document.getElementById('abrir');
+        const resetButton = document.getElementById('fechar');
+        const pullButton = document.getElementById('puxar');
+
+        openButton.addEventListener('touchstart', () => {
+            flap.style.transform = 'rotateX(-180deg)';
+            heartContainer.style.opacity = '1';
+        });
+
+        resetButton.addEventListener('touchstart', () => {
+            flap.style.transform = 'rotateX(0deg)';
+            heartContainer.style.opacity = '0';
+        });
+
+        pullButton.addEventListener('touchstart', () => {
+            papel.style.opacity = 1;
+        })
+
+    </script>
+</body>
+</html>
