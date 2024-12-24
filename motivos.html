@@ -9,15 +9,33 @@
 
 <body>
     <!-- Divs escondidas com IDs -->
-    <div id="div1" class="hidden" style="left: 100px;">Oi</div>
-    <div id="div2" class="hidden" style="right: 100px;">Tudo bem?</div>
-    <div id="div3" class="hidden" style="top: 100px;">Como vai?</div>
-    <div id="div4" class="hidden" style="bottom: 100px;">Ily</div>
-    
+    <table>
+        <tr>
+            <td><div id="div1" class="hidden">Oi</div></td>
+            <td><div id="div2" class="hidden">Tudo bem?</div></td>
+            <td><div id="div3" class="hidden">Como vai?</div></td>
+        </tr>
+        <tr>
+            <td><div id="div4" class="hidden">Ily</div></td>
+            <td><div id="div5" class="hidden">Como vai?</div></td>
+            <td><div id="div6" class="hidden">Como vai?</div></td>
+        </tr>
+        <tr>
+            <td><div id="div7" class="hidden">Ily</div></td>
+            <td><div id="div8" class="hidden">Como vai?</div></td>
+            <td><div id="div9" class="hidden">Como vai?</div></td>
+        </tr>
+        <tr>
+            <td><div id="div10" class="hidden">Ily</div></td>
+            <td><div id="div11" class="hidden">Como vai?</div></td>
+            <td><div id="div12" class="hidden">Como vai?</div></td>
+        </tr>
+    </table>
+
     <div id="instrução">
         Clique e descubra!
         <br>
-        <span id="pontuacao">0</span>/4
+        <span id="pontuacao">0</span>/12
     </div>
 
     <div id="hiddenMaior">
@@ -34,7 +52,7 @@
             const touchY = event.touches[0].clientY;
 
             // Lista de IDs das divs
-            const ids = ['div1', 'div2', 'div3', 'div4'];
+            const ids = ['div1', 'div2', 'div3', 'div4', 'div5', 'div6', 'div7', 'div8', 'div9', 'div10', 'div11', 'div12'];
 
             ids.forEach(id => {
                 //pega a div mesmo
@@ -54,12 +72,18 @@
             
             //se ja achou todos
             if (pontuacao == ids.length) {
-                const divFinal = document.getElementById('hiddenMaior')
-                const rect = divFinal.getBoundingClientRect();
-                divFinal.style.opacity = 1;
+                alert('Clique na tela se terminou de ler.');
 
-                if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
-                    window.location.href = 'carta.html'; 
+                if (touchX >= 0 && touchX <= window.innerWidth && touchY >= 0 && touchY <= window.innerHeight) {
+                    const divFinal = document.getElementById('hiddenMaior')
+                    const rect = divFinal.getBoundingClientRect();
+                    divFinal.style.opacity = 1;
+
+                    document.querySelectorAll('.hidden').style.opacity = 0;
+
+                    if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
+                        window.location.href = 'carta.html'; 
+                    }
                 }
             }
         });

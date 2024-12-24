@@ -4,43 +4,59 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+
+    margin: 0;
+    padding: 0;
+    background-image: url('fundo.jpg'); /* Insira o caminho da imagem aqui */
+    background-size: cover; /* A imagem cobre toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
 }
 
 #inicial{
     text-align: center;
-    background-color: rgb(70, 173, 87);
+    background-color: #4b225e;
     border-radius: 100%;
-    padding: 100px;
+    padding: 70px;
+    margin: 15px;
+    color: white;
+    border: 1px solid rgb(236, 228, 236);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.5);
 }
 
 .hidden{
-    position: absolute;
     opacity: 0;
-    background-color: rgb(70, 173, 87);
-    border: 1px solid rgb(196, 186, 186);
+    background-color: #4b225e;;
+    border: 1px solid rgb(236, 228, 236);
     text-align: center;
     border-radius: 100%;
-    padding: 50px;
+    padding: 40px;
+    color: white;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.5);
 }
 
 #instrução{
-    background-color: white;
-    padding: 20px;
+    position: absolute;
+    background-color: #6cde70;
+    font-weight: bold;
+    border: 1px solid rgb(236, 228, 236);
+    padding: 15px;
     border-radius: 20px;
-    margin-bottom: 550px;
+    top: 0;
     text-align: center;
 }
 
 #hiddenMaior{
     position: absolute;
     opacity: 0;
-    background-color: rgb(95, 182, 109);
-    border: 2px solid rgb(196, 186, 186);
+    margin: 15px;
+    background-color: #6cde70;
+    border: 1px solid rgb(236, 228, 236);;
     text-align: center;
     border-radius: 100%;
-    padding: 50px;
+    padding: 40px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.5);
 }
 
 #envelope{
