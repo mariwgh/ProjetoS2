@@ -32,7 +32,7 @@ body{
     border: 1px solid rgb(236, 228, 236);
     text-align: center;
     border-radius: 100%;
-    padding: 35px;
+    padding: 30px;
     color: white;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.5);
 }

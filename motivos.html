@@ -15,17 +15,17 @@
             <td><div id="div2" class="hidden">Sua voz. Eu amo ouvir você cantando, você é a artista que me dá vontade de ouvir todos os álbuns.</div></td>
         </tr>
         <tr>
-            <td><div id="div3" class="hidden">Seu cabelo. A ondulação dele é a minha favorita e ele cheira tão bem!</div></td>
-            <td><div id="div4" class="hidden">Seu talento. Uau, você tem de sobra! Tantos instrumentos, tantos conhecimentos...</div></td>
-            <td><div id="div5" class="hidden">Seus detalhes. Seu nariz 'de bolinha', seu dedinho 'torto', sua cicatriz..</div></td>
+            <td><div id="div3" class="hidden">Seu toque físico.</div></td>
+            <td><div id="div4" class="hidden">Seu talento. Uau, você tem de sobra! Tantos instrumentos, tantos conhecimentos e tanta paciência para ensinar...</div></td>
+            <td><div id="div5" class="hidden">Seus detalhes. Seu nariz 'de bolinha' é lindo, seu dedinho 'torto' complementa o meu, sua cicatriz é daora e única igual você.</div></td>
         </tr>
         <tr>
-            <td><div id="div6" class="hidden">Seu mistério.</div></td>
-            <td><div id="div7" class="hidden">Seu jeito.</div></td>
+            <td><div id="div6" class="hidden">Você me gera fascínio. Amo descobrir coisas novas sobre você.</div></td>
+            <td><div id="div7" class="hidden">Seu jeito. A maneira como você faz as coisas e trata as pessoas. Sua personalidade.</div></td>
         </tr>
         <tr>
-            <td><div id="div8" class="hidden">Seu modo de pensar.</div></td>
-            <td><div id="div9" class="hidden">Seu toque físico.</div></td>
+            <td><div id="div8" class="hidden">Seu modo de pensar e suas opiniões.</div></td>
+            <td><div id="div9" class="hidden">Seu cabelo. A ondulação dele é a minha favorita e ele cheira tão bem!</div></td>
             <td><div id="div10" class="hidden">Suas mensagens, presentes e palavras.</div></td>
         </tr>
     </table>
@@ -70,18 +70,14 @@
             
             //se ja achou todos
             if (pontuacao == ids.length) {
-                alert('Clique na tela se terminou de ler.');
+                const divFinal = document.getElementById('hiddenMaior')
+                const rect = divFinal.getBoundingClientRect();
+                divFinal.style.opacity = 1;
 
-                if (touchX >= 0 && touchX <= window.innerWidth && touchY >= 0 && touchY <= window.innerHeight) {
-                    const divFinal = document.getElementById('hiddenMaior')
-                    const rect = divFinal.getBoundingClientRect();
-                    divFinal.style.opacity = 1;
+                document.querySelectorAll('.hidden').style.opacity = 0;
 
-                    document.querySelectorAll('.hidden').style.opacity = 0;
-
-                    if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
-                        window.location.href = 'carta.html'; 
-                    }
+                if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
+                    window.location.href = 'carta.html'; 
                 }
             }
         });
