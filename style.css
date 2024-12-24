@@ -95,30 +95,21 @@ body{
     height: 25px;
     position: relative;
     background-color: red;
-    transform: rotate(225deg);
-    margin: 10px;
+    /* transform: rotate(225deg); */
+    margin: 8px;
     animation: pulse 1s infinite;
 }
 .coracao.fly {
-    animation: fly 5s linear forwards;
-}
-/* Animação para o efeito de pulsar */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
+    animation: fly 10s linear forwards;
 }
 /* Animação para os corações voarem para cima */
 @keyframes fly {
     0% {
-        transform: translateY(0) scale(1);
+        transform: translateY(0) rotate(225deg) scale(1);
         opacity: 1;
     }
     100% {
-        transform: translateY(-150vh) scale(0.5); /* Sai da tela e diminui */
+        transform: translateY(-150vh) rotate(-900deg) scale(0.5); /* Sai da tela e diminui */
         opacity: 0;
     }
 }

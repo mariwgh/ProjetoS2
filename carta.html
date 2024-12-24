@@ -8,16 +8,18 @@
 </head>
 
 <body>
-    <div id="heart-container">
-        <div class="coracao" style="left: 35px;"></div>
-        <div class="coracao"></div>
-    </div>
+    
 
     <div id="envelope">
         <div id="bottom-flap"></div>
         <div id="top-flap"><div id="adesivo"></div></div>
         <div id="divisoria-sombra"></div>
-        
+
+        <div id="heart-container">
+            <div class="coracao" style="left: 30px;"></div>
+            <div class="coracao" style="right: 50px;"></div>
+            <div class="coracao"></div>
+        </div>
         
         <div id="papel">
             <span id="escrita"></span>
@@ -48,11 +50,11 @@
         const hearts = document.querySelectorAll(".coracao");
 
         // Função para ativar o voo dos corações
-        function makeHeartsFly() {
+        function voarCoracoes() {
             hearts.forEach((heart, index) => {
                 setTimeout(() => {
                     heart.classList.add("fly");
-                }, index * 500); // Adiciona delay entre cada coração
+                }, index * 200); // Adiciona delay entre cada coração
             });
         }
 
@@ -65,7 +67,7 @@
         openButton.addEventListener('touchstart', () => {
             flap.style.transform = 'rotateX(-180deg)';
             heartContainer.style.opacity = '1';
-            makeHeartsFly();
+            voarCoracoes();
         });
 
         resetButton.addEventListener('touchstart', () => {
