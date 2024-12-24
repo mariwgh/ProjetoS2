@@ -74,7 +74,9 @@
                 const rect = divFinal.getBoundingClientRect();
                 divFinal.style.opacity = 1;
 
-                document.querySelectorAll('.hidden').style.opacity = 0;
+                document.querySelectorAll('.hidden').forEach(div => {
+                    div.style.opacity = 0; 
+                });
 
                 if (touchX >= rect.left && touchX <= rect.right && touchY >= rect.top && touchY <= rect.bottom) {
                     window.location.href = 'carta.html'; 
