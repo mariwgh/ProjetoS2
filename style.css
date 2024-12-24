@@ -26,14 +26,20 @@ body{
 }
 
 .hidden{
-    opacity: 0;
+    opacity: 1;
+    font-size: 13px;
     background-color: #4b225e;;
     border: 1px solid rgb(236, 228, 236);
     text-align: center;
     border-radius: 100%;
-    padding: 40px;
+    padding: 35px;
     color: white;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.5);
+}
+
+tr {
+    display: flex;
+    justify-content: center;
 }
 
 #instrução{

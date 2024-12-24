@@ -11,31 +11,29 @@
     <!-- Divs escondidas com IDs -->
     <table>
         <tr>
-            <td><div id="div1" class="hidden">Oi</div></td>
-            <td><div id="div2" class="hidden">Tudo bem?</div></td>
-            <td><div id="div3" class="hidden">Como vai?</div></td>
+            <td><div id="div1" class="hidden">Seus olhos. A maneira como eles harmoniosamente combinam cílios, formato e cor é perfeita.</div></td>
+            <td><div id="div2" class="hidden">Sua voz. Eu amo ouvir você cantando, você é a artista que me dá vontade de ouvir todos os álbuns.</div></td>
         </tr>
         <tr>
-            <td><div id="div4" class="hidden">Ily</div></td>
-            <td><div id="div5" class="hidden">Como vai?</div></td>
-            <td><div id="div6" class="hidden">Como vai?</div></td>
+            <td><div id="div3" class="hidden">Seu cabelo. A ondulação dele é a minha favorita e ele cheira tão bem!</div></td>
+            <td><div id="div4" class="hidden">Seu talento. Uau, você tem de sobra! Tantos instrumentos, tantos conhecimentos...</div></td>
+            <td><div id="div5" class="hidden">Seus detalhes. Seu nariz 'de bolinha', seu dedinho 'torto', sua cicatriz..</div></td>
         </tr>
         <tr>
-            <td><div id="div7" class="hidden">Ily</div></td>
-            <td><div id="div8" class="hidden">Como vai?</div></td>
-            <td><div id="div9" class="hidden">Como vai?</div></td>
+            <td><div id="div6" class="hidden">Seu mistério.</div></td>
+            <td><div id="div7" class="hidden">Seu jeito.</div></td>
         </tr>
         <tr>
-            <td><div id="div10" class="hidden">Ily</div></td>
-            <td><div id="div11" class="hidden">Como vai?</div></td>
-            <td><div id="div12" class="hidden">Como vai?</div></td>
+            <td><div id="div8" class="hidden">Seu modo de pensar.</div></td>
+            <td><div id="div9" class="hidden">Seu toque físico.</div></td>
+            <td><div id="div10" class="hidden">Suas mensagens, presentes e palavras.</div></td>
         </tr>
     </table>
 
     <div id="instrução">
         Clique e descubra!
         <br>
-        <span id="pontuacao">0</span>/12
+        <span id="pontuacao">0</span>/10
     </div>
 
     <div id="hiddenMaior">
@@ -52,7 +50,7 @@
             const touchY = event.touches[0].clientY;
 
             // Lista de IDs das divs
-            const ids = ['div1', 'div2', 'div3', 'div4', 'div5', 'div6', 'div7', 'div8', 'div9', 'div10', 'div11', 'div12'];
+            const ids = ['div1', 'div2', 'div3', 'div4', 'div5', 'div6', 'div7', 'div8', 'div9', 'div10'];
 
             ids.forEach(id => {
                 //pega a div mesmo
