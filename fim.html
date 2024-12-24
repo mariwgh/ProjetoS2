@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="abrir" style="border: none;"><div class="coracao2" style="transform: rotate(225deg);"></div></button>
+    <div id="coracao2" class="coracao2" style="transform: rotate(225deg); left: 80px; display: none;"></div>
+    <div id="papelzinho">Oi</div>
+
+    <script>
+        const openButton = document.getElementById('abrir');
+
+        openButton.addEventListener('touchstart', () => {
+            abrirCoracao();
+        });
+
+        function abrirCoracao() {
+            const coracao1 = document.getElementsByClassName('coracao2')[0];
+            const coracao2 = document.getElementById('coracao2');
+            const papelzinho = document.getElementById('papelzinho');
+            coracao1.style.left = '-100px';
+            coracao2.style.display = 'block';
+            papelzinho.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
