@@ -74,9 +74,9 @@
                 const rect = divFinal.getBoundingClientRect();
                 divFinal.style.opacity = 1;
 
-                // document.querySelectorAll('.hidden').forEach(div => {
-                //     div.style.opacity = 0; 
-                // });
+                document.querySelectorAll('.hidden').forEach(div => {
+                    div.style.opacity = 0; 
+                });
 
                 document.body.addEventListener('touchstart', () => {
                     window.location.href = 'carta.html'; 
